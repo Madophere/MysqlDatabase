@@ -1,0 +1,74 @@
+
+      Creating a DataBase using MySql
+      
+      Creating Table 1
+      create table stuDet
+      (
+      id int,
+      reqNo int,
+      studentName Varchar(40),
+      taskCompleted int,
+      queries Varchar(100),
+      attendance float
+      );
+    
+
+      Creating Table 2
+      create table mentDet
+      (
+      reqId int,
+      mentorName Varchar(40),
+      reqNo int,
+      queryTitle Varchar(100),
+      status Varchar(40)
+      );
+      
+
+      Inserting TableData 2
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)
+      values ( 1, "Akbar", 351, "Placement Query", "assigned" )
+      
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)
+      values ( 2, "Tamil", 352, "Hackathon Query", "assigned" )
+      
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)
+      values ( 3, "Raghav", 353, "Query regarding ReactJS", "assigned" )
+      
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)
+      values ( 4, "Venkat", 354, "Query regarding NodeJS", "assigned" )
+      
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)
+      values ( 5, "Sai mohan", 355, "Query regarding Database", "assigned" )
+      
+
+      Inserting TableData 1
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)
+      values (1, 353, 'madhan', 6, 'Need assistance on creating class component', 70.22)
+      
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)
+      values (2, 351, 'Shanjay', 6, 'When Will the Placement Get Started', 80.22)
+      
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)
+      values (3, 354, 'Mohan', 6, 'How to Connect a database from NodeJS', 90.22)
+      
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)
+      values (4, 352, 'ManasKumar', 5, 'I cant Fetch Api from Spotify App', 70.22)
+      
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)
+      values (5, 355, 'Allirani', 2, 'How to join two tables and query it?', 50.22)
+      
+  
+      Combining two tableData
+      select *
+      from studet
+      inner join mentdet
+      on mentdet.reqNo=studet.reqNo;
+    
